@@ -9,7 +9,7 @@ const ProfileSection = ({ isOnline }) => {
           
           <div className="w-52 h-52 rounded-full overflow-hidden border-4 border-indigo-500">
             <img 
-              src="/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg" 
+              src={process.env.PUBLIC_URL + '/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg'} 
               alt="Suphasukit Profile" 
               className="w-full h-full object-cover"
               onError={(e) => {

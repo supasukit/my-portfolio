@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { sections, skills, projects, experience } from './data/portfolioData';
-import ProfileSection from './components/ProfileSection';
-import ExperienceSection from './components/ExperienceSection';
-import ProjectsSection from './components/ProjectsSection';
-import EducationSection from './components/EducationSection';
-import SkillsSection from './components/SkillsSection';
-import ContactSection from './components/ContactSection';
+import ProfileSection from './components/ProfileSection.jsx';
+import ExperienceSection from './components/ExperienceSection.jsx';
+import ProjectsSection from './components/ProjectsSection.jsx';
+import EducationSection from './components/EducationSection.jsx';
+import SkillsSection from './components/SkillsSection.jsx';
+import ContactSection from './components/ContactSection.jsx';
 
 const DiscordPortfolio = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -42,8 +42,8 @@ const DiscordPortfolio = () => {
       {/* Background เบลอ */}
       <div 
         className="absolute inset-0 scale-110"
-        style={{
-          backgroundImage: 'url(/images/intro-coding.jpeg)',
+          style={{
+  backgroundImage: `url(${process.env.PUBLIC_URL + '/images/intro-coding.jpeg'})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -64,7 +64,7 @@ const DiscordPortfolio = () => {
                 {/* รูปโปรไฟล์ */}
                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-indigo-500">
                   <img 
-                    src="/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg" 
+                    src={process.env.PUBLIC_URL + '/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg'} 
                     alt="Suphasukit" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
