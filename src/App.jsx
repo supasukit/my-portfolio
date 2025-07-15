@@ -84,30 +84,30 @@ function App() {
 
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-gray-800/95 backdrop-blur-sm border-b border-gray-700 sticky top-16 z-40">
-            <nav className="p-4">
-              <div className="grid grid-cols-2 gap-2">
-                {sections.map((section) => {
-                  const Icon = section.icon;
-                  return (
-                    <button
-                      key={section.id}
-                      onClick={() => handleSectionChange(section.id)}
-                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors text-sm ${
-                        activeSection === section.id
-                          ? 'bg-indigo-600 text-white'
-                          : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                      }`}
-                    >
-                      <Icon className="w-4 h-4" />
-                      <span>{section.label}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </nav>
-          </div>
-        )}
+  <div className="lg:hidden bg-gray-800/95 backdrop-blur-sm border-b border-gray-700 sticky top-16 z-40">
+    <nav className="p-6"> {/* เพิ่ม padding */}
+      <div className="space-y-3"> {/* เปลี่ยนจาก grid เป็น vertical list */}
+        {sections.map((section) => {
+          const Icon = section.icon;
+          return (
+            <button
+              key={section.id}
+              onClick={() => handleSectionChange(section.id)}
+              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors text-left ${
+                activeSection === section.id
+                  ? 'bg-indigo-600 text-white'
+                  : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+              }`}
+            >
+              <Icon className="w-5 h-5" />
+              <span className="font-medium">{section.label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </nav>
+  </div>
+)}
 
         {/* Desktop Sidebar */}
         <div className="hidden lg:block w-80 bg-gray-800/95 backdrop-blur-sm border-r border-gray-700">

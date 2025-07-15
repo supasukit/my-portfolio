@@ -1,7 +1,27 @@
-
 import { Trophy } from 'lucide-react';
 
-const SkillsSection = ({ skills }) => {
+const SkillsSection = () => {
+  const skills = {
+    'Frontend Development': [
+      'React', 'JavaScript (ES6+)', 'HTML5/CSS3', 'Tailwind CSS', 'Bootstrap', 'Responsive Design'
+    ],
+    'Backend Development': [
+      'Node.js', 'Express.js', 'PHP', 'RESTful APIs', 'JWT Authentication', 'Docker'
+    ],
+    'Database & Tools': [
+      'MongoDB', 'MySQL', 'Git/GitHub', 'Docker', 'Tableau', 'Linux/Unix'
+    ],
+    'Programming Languages': [
+      'JavaScript', 'Python', 'Dart (Flutter)', 'PHP', 'C++', 'Java'
+    ],
+    'Mobile & Desktop': [
+      'Flutter', 'Electron.js', 'React Native', 'Cross-platform Development', 'Mobile UI/UX'
+    ],
+    'Data Science & AI': [
+      'Python (Data Analysis)', 'TensorFlow', 'Machine Learning', 'Pandas/NumPy', 'Data Visualization'
+    ]
+  };
+
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
