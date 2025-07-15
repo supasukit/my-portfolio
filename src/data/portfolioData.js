@@ -20,32 +20,76 @@ export const skills = {
 
 export const projects = [
   {
-    title: 'Cross-Platform POS Application',
-    tech: ['Electron.js', 'Node.js', 'MongoDB', 'React', 'JWT'],
-    description: 'Developed a full-featured desktop POS system with barcode scanning, inventory management, and secure user authentication.',
+    title: 'Mobile Store Data Application',
+    tech: ['Flutter', 'Dart', 'Node.js', 'Express', 'Docker', 'MongoDB'],
+    description: 'A comprehensive mobile application developed with Flutter to connect retail stores with real-time data management capabilities. The project involves building a complete ecosystem including mobile frontend, RESTful API backend, and containerized database infrastructure. Features include real-time inventory tracking, sales analytics, customer management, and secure multi-user authentication with role-based access control. The application supports both Android and iOS platforms with responsive UI design and offline-first architecture for seamless user experience.',
     status: 'In Development',
-    type: 'Freelance Project'
+    type: 'Personal Project',
+    features: [
+      'Architected and implemented RESTful API with Express.js for seamless data operations',
+      'Deployed MongoDB using Docker containers for scalable database management',
+      'Developed cross-platform mobile UI with Flutter supporting Android and iOS',
+      'Implemented JWT-based authentication with role-based permission system',
+      'Built real-time data synchronization for inventory and sales tracking'
+    ]
   },
   {
-    title: 'COVID-19 Employment Analysis',
-    tech: ['Python', 'Linear Regression', 'RNN', 'LSTM', 'Tableau'],
-    description: 'Built predictive models to forecast post-COVID employment trends in Thailand with comprehensive data visualization.',
+    title: 'Portfolio Website',
+    tech: ['React', 'Tailwind CSS', 'Lucide Icons', 'GitHub Pages'],
+    description: 'A modern, interactive portfolio website built with React and inspired by Discord\'s sleek user interface design. The project showcases advanced frontend development skills through component-based architecture, responsive design principles, and smooth animations. Features include dynamic content rendering, interactive navigation, certificate galleries with modal displays, and optimized performance. The website demonstrates proficiency in modern web technologies, CSS frameworks, and deployment automation through GitHub Pages with continuous integration.',
     status: 'Completed',
-    type: 'University Project'
+    type: 'Personal Project',
+    liveUrl: 'https://supasukit.github.io/my-portfolio',
+    githubUrl: 'https://github.com/supasukit/my-portfolio'
   },
   {
-    title: 'Travel Journal Web App',
-    tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'Bootstrap'],
-    description: 'Designed normalized database schema and built full-stack web application with CRUD operations.',
-    status: 'Completed',
-    type: 'University Project'
-  }
+  title: 'POS Application',
+  tech: ['Electron.js', 'Node.js', 'MongoDB', 'React', 'JWT', 'Docker'],
+  description: 'A comprehensive Point-of-Sale system developed with Electron.js for cross-platform desktop deployment across multiple operating systems. The database is hosted on a private server using MongoDB running through Docker Container for enhanced stability and streamlined management. The application features a complete suite of retail functionality including barcode scanning technology, real-time inventory management, customer relationship management, and comprehensive sales analytics. Built with a security-first approach implementing JWT authentication, data encryption, and multi-level user permission hierarchies. Additional features include automated reporting systems, outstanding debt tracking, payment history management, and multi-currency support, specifically designed for small to medium-sized businesses.',
+  status: 'Completed',
+  type: 'Personal Project',
+  features: [
+    'Deployed and managed MongoDB using Docker on private server infrastructure',
+    'Developed cross-platform Desktop Application with Electron.js supporting Windows, macOS, and Linux',
+    'Implemented barcode scanning system with real-time inventory management capabilities',
+    'Built comprehensive authentication system and user role management using JWT',
+    'Configured private server database deployment through Docker containerization'
+  ]
+},
+  {
+  title: 'COVID-19 Employment Analysis Thailand',
+  tech: ['Python', 'TensorFlow', 'Linear Regression', 'RNN', 'LSTM', 'Tableau', 'Pandas', 'NumPy'],
+  description: 'An advanced data science project analyzing the impact of COVID-19 on Thailand\'s employment landscape using machine learning and statistical modeling. Developed multiple predictive models including Linear Regression for trend analysis, RNN for sequential data processing, and LSTM networks for long-term employment forecasting. The project involved comprehensive data collection from government sources, advanced data preprocessing, feature engineering, and model optimization. Created interactive Tableau dashboards for stakeholder presentation, enabling dynamic visualization of employment trends, sector-specific impacts, and recovery projections across different Thai provinces.',
+  status: 'Completed',
+  type: 'University Project',
+  features: [
+    'Collected and processed employment data from government agencies and official sources',
+    'Developed multiple Machine Learning models (Linear Regression, RNN, LSTM) for forecasting',
+    'Created interactive Tableau dashboards for dynamic data visualization and presentation',
+    'Analyzed employment impact across different industry sectors and Thai provinces',
+    'Generated post-COVID labor market recovery trend predictions and projections'
+  ]
+},
+{
+  title: 'Travel Journal Web Application',
+  tech: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'Bootstrap', 'JavaScript'],
+  description: 'A full-stack web application designed for travel enthusiasts to document and share their journey experiences. The project demonstrates strong database design principles through normalized schema creation, comprehensive ER diagram modeling, and optimized query performance. Features include user authentication, photo gallery management, interactive maps integration, travel itinerary planning, and social sharing capabilities. Built with responsive design using Bootstrap framework, ensuring seamless experience across desktop and mobile devices. Implemented advanced search functionality, tag-based content organization, and privacy controls for personal travel data.',
+  status: 'Completed',
+  type: 'University Project',
+  features: [
+    'Designed normalized database schema with comprehensive ER diagrams and optimized queries',
+    'Built photo gallery management system for storing and organizing travel memories',
+    'Integrated interactive maps for route visualization and destination marking',
+    'Developed travel itinerary planning system with scheduling and organization tools',
+    'Implemented advanced search functionality with tag-based filtering and privacy controls'
+  ]
+}
 ];
 
 export const experience = [
   {
     title: 'Full-Stack Developer',
-    company: 'Freelance Project',
+    company: 'Personal Project',
     period: 'Jul 2025 - Present',
     type: 'Remote',
     achievements: [
