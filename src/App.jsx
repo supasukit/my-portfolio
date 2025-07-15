@@ -55,7 +55,7 @@ function App() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/intro-coding.jpeg)`,
           filter: 'blur(3px)'
         }}
       ></div>
@@ -65,9 +65,16 @@ function App() {
         <div className="lg:hidden bg-gray-800/95 backdrop-blur-sm border-b border-gray-700 p-4 sticky top-0 z-50">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SK</span>
-              </div>
+              <div className="relative">
+        <img 
+          src={`${process.env.PUBLIC_URL}/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg`}
+          alt="Profile"
+          className="w-8 h-8 rounded-full object-cover border-2 border-indigo-400"
+        />
+        {/* Online Status - Mobile */}
+        <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 border-2 border-gray-800 rounded-full"></div>
+      </div>
+      
               <div>
                 <h1 className="text-white font-semibold text-sm">Suphasukit</h1>
                 <p className="text-gray-400 text-xs">Full-Stack Developer</p>
@@ -110,16 +117,22 @@ function App() {
 )}
 
         {/* Desktop Sidebar */}
-        <div className="hidden lg:block w-80 bg-gray-800/95 backdrop-blur-sm border-r border-gray-700">
-          {/* Profile Header */}
-          <div className="p-6 border-b border-gray-700">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">SK</span>
-              </div>
-              <div>
-                <h1 className="text-white font-semibold">Suphasukit</h1>
-                <p className="text-gray-400 text-sm">Full-Stack Developer</p>
+<div className="hidden lg:block w-80 bg-gray-800/95 backdrop-blur-sm border-r border-gray-700">
+  {/* Profile Header */}
+  <div className="p-6 border-b border-gray-700">
+    <div className="flex items-center space-x-4">
+      <div className="relative">
+        <img 
+          src={`${process.env.PUBLIC_URL}/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg`}
+          alt="Profile"
+          className="w-12 h-12 rounded-full object-cover border-2 border-indigo-400"
+        />
+        {/* Online Status - Desktop */}
+        <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-gray-800 rounded-full"></div>
+      </div>
+      <div>
+        <h1 className="text-white font-semibold">Suphasukit</h1>
+        <p className="text-gray-400 text-sm">Full-Stack Developer</p>
               </div>
             </div>
           </div>
@@ -157,6 +170,8 @@ function App() {
       </div>
     </div>
   );
+  
 }
+
 
 export default App;

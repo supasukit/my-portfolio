@@ -5,26 +5,16 @@ const ProfileSection = ({ isOnline }) => {
   return (
     <div className="space-y-6">
       <div className="flex items-center space-x-4 mb-6">
-        <div className="relative">
-          
-          <div className="w-52 h-52 rounded-full overflow-hidden border-4 border-indigo-500">
-            <img 
-              src={process.env.PUBLIC_URL + '/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg'} 
-              alt="Suphasukit Profile" 
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
-              }}
-            />
-            
-            <div className="w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-4xl font-bold text-white" style={{display: 'none'}}>
-              SK
-            </div>
-          </div>
-         
-          <div className={`absolute -bottom-1 -right-1 w-8 h-8 rounded-full border-4 border-gray-800 ${isOnline ? 'bg-green-500' : 'bg-gray-500'}`}></div>
-        </div>
+        {/* Profile Image with Status */}
+<div className="relative mb-6">
+  <img 
+    src={`${process.env.PUBLIC_URL}/images/d6440734-f5f5-41d4-9082-be8df04220fe.jpg`}
+    alt="Suphasukit Kleebai" 
+    className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-indigo-400 shadow-lg"
+  />
+  {/* Online Status - Main Profile */}
+  <div className="absolute bottom-2 right-2 w-6 h-6 bg-green-500 border-4 border-gray-800 rounded-full"></div>
+</div>
         <div>
           <h1 className="text-3xl font-bold text-white">{personalInfo.name}</h1>
           <p className="text-lg text-indigo-400">{personalInfo.title}</p>
